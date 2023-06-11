@@ -90,6 +90,7 @@
         overflow: hidden;
         display: flex;
         align-items: center;
+        cursor: pointer;
 
         @include media(991) {
             display: none;
@@ -143,6 +144,30 @@
     }
 }
 
+.upcoming-enter-active,
+.upcoming-leave-active {
+    transition: 0.3s ease-in-out;
+}
+
+.upcoming-enter-from {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.upcoming-item-enter-active,
+.upcoming-item-leave-active {
+    transition: 0.3s linear;
+}
+
+.upcoming-item-enter-from {
+    opacity: 0;
+    transform: scale(1);
+}
+
+.upcoming-item-leave-to {
+    opacity: 0;
+    transform: scale(1.2);
+}
 
 @keyframes time {
     0% {
